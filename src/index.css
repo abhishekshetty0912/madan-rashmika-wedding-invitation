@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-maroon-950: #2b060b;
+  --color-maroon-900: #3D0A11;
+  --color-maroon-800: #5B131D;
+  --color-maroon-700: #751B27;
+  --color-maroon-600: #912635;
+  --color-gold-300: #F5E3B3;
+  --color-gold-400: #E5C378;
+  --color-gold-500: #C59B4B;
+  --color-gold-600: #A47B2C;
+  --color-gold-700: #855E19;
+  --color-ivory-50: #FDFBF7;
+  --color-ivory-100: #FAF6EE;
+  --color-ivory-200: #F4ECE0;
+  --color-ivory-300: #EADFCF;
+  --color-ivory-400: #DECDBD;
+  --color-sand: #9E8975;
+  --color-ink: #2A1A1D;
+
+  --font-marcellus: "Marcellus", serif;
+  --font-cinzel: "Cinzel Decorative", serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-kannada: "Tiro Kannada", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Traditional handmade Indian parchment paper texture */
+.bg-paper-texture {
+  background-color: #FAF6EE;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(197, 155, 75, 0.05) 0%, transparent 60%),
+    radial-gradient(circle at 15% 25%, rgba(91, 19, 29, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(197, 155, 75, 0.04) 0%, transparent 45%),
+    url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 86c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zm28-65c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23c59b4b' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Gold foil shimmer text effect */
+@keyframes shimmerGold {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-foil-text {
+  background: linear-gradient(120deg, #9C742A 0%, #E5C378 25%, #FFF6CC 50%, #C59B4B 75%, #8B651B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerGold 6s linear infinite;
+}
+
+/* Lotus pulse bloom animation */
+@keyframes bloomLotus {
+  0% { transform: scale(0.92); filter: drop-shadow(0 0 3px rgba(229,195,120,0.3)); }
+  50% { transform: scale(1.04); filter: drop-shadow(0 0 16px rgba(229,195,120,0.65)); }
+  100% { transform: scale(0.92); filter: drop-shadow(0 0 3px rgba(229,195,120,0.3)); }
+}
+
+.animate-lotus {
+  animation: bloomLotus 4s ease-in-out infinite;
+}
+
+/* Royal card border with inner fine hairline */
+.royal-border-box {
+  border: 1px solid rgba(197, 155, 75, 0.45);
+  position: relative;
+}
+.royal-border-box::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(91, 19, 29, 0.2);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Custom golden scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #C59B4B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A47B2C;
+}
+
